@@ -1,8 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
+    <color name="main_black">#171717</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="main_background">#F8F8F8</color>
     <color name="editText">#EDEDED</color>
     <color name="main_button_color">#8876C5</color>
     <color name="edit_text_hint">#C2C1C3</color>
+    <color name="bottom_nav_bar_selected">#8876C5</color>
+    <color name="transparent">#00000000</color>
+    <color name="booked_table_color">#888888</color>
+    <color name="free_table_color">#33C300</color>
+    <color name="status_in_process_color">#F9B70F</color>
+    <color name="status_order_new_color">#FF5151</color>
+    <color name="status_order_closed_color">#C9C9C9</color>
+    <color name="all_status_color">#756FB3</color>
+
+<!--orders page color-->
+    <color name="selected_tab">#8876C5</color>
+    <color name="not_selected_tab">#5B5B70</color>
+
 </resources>

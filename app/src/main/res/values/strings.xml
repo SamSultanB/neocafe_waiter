@@ -45,4 +45,21 @@
     </string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="getCode">Получить код</string>
+    <string name="orders">Заказы</string>
+    <string name="booked">Занято</string>
+    <string name="free">Свободно</string>
+    <string name="ready">Готово</string>
+    <string name="tableNuber">Стол №</string>
+    <string name="numberSign">№</string>
+    <string name="exampleTime">18:30</string>
+    <string name="tableNumber">Стол №</string>
+    <string name="client">Клиент:</string>
+    <string name="error_message">Упс, что-то пошло не так</string>
+    <string name="refresh">Обновить</string>
+    <string name="tables">Столы</string>
+    <string name="totalSum">Итого:</string>
+    <string name="_720">720 сом</string>
+    <string name="add">Добавить</string>
+    <string name="closeOrder">Закрыть счет</string>
 </resources>

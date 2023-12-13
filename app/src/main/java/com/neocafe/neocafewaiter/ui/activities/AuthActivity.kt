@@ -1,4 +1,4 @@
-package com.neocafe.neocafewaiter
+package com.neocafe.neocafewaiter.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
