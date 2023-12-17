@@ -15,6 +15,15 @@
     <color name="status_order_new_color">#FF5151</color>
     <color name="status_order_closed_color">#C9C9C9</color>
     <color name="all_status_color">#756FB3</color>
+    <color name="orange">#FFA580</color>
+    <color name="searchbar_background">#F2F2F2</color>
+    <color name="category1_color">#AB825B</color>
+    <color name="tea_category_color">#D65555</color>
+    <color name="blue">#0000FF</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="purple">#A020F0</color>
+    <color name="green">#33C300</color>
+    <color name="gray">#5B5B70</color>
 
 <!--orders page color-->
     <color name="selected_tab">#8876C5</color>

@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/main_background"
+    tools:context=".ui.fragments.profile.ProfileFragment">
+
+    <LinearLayout
+        android:id="@+id/mainScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="16dp">
+
+            <ImageButton
+                android:id="@+id/arrowBackBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:layout_gravity="start"
+                android:src="@drawable/button_arrow_back_icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="@string/profile"
+                android:layout_weight="1"
+                android:textColor="@color/main_black"
+                android:textStyle="bold"
+                android:textSize="17sp" />
+
+            <ImageButton
+                android:id="@+id/signOutBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:layout_gravity="start"
+                android:src="@drawable/signout_icon"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Имя"
+                android:textColor="@color/edit_text_hint"
+                android:textSize="14sp"
+                android:textStyle="normal"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/edit_text_corners"
+                android:backgroundTint="@color/editText"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:hintEnabled="false"
+                app:hintTextColor="@color/edit_text_hint"
+                app:layout_constraintEnd_toEndOf="@+id/loginFieldContainer"
+                app:layout_constraintStart_toStartOf="@+id/loginFieldContainer"
+                app:layout_constraintTop_toBottomOf="@+id/passwordTitle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/nameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/profile_name_icon"
+                    android:drawablePadding="15dp"
+                    android:hint="Имя"
+                    android:inputType="textPassword"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Имя"
+                android:textColor="@color/edit_text_hint"
+                android:textSize="14sp"
+                android:textStyle="normal"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/edit_text_corners"
+                android:backgroundTint="@color/editText"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:hintEnabled="false"
+                app:hintTextColor="@color/edit_text_hint"
+                app:layout_constraintEnd_toEndOf="@+id/loginFieldContainer"
+                app:layout_constraintStart_toStartOf="@+id/loginFieldContainer"
+                app:layout_constraintTop_toBottomOf="@+id/passwordTitle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/surnameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/profile_name_icon"
+                    android:drawablePadding="15dp"
+                    android:hint="Фамилия"
+                    android:inputType="textPassword"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Дата рождения"
+                android:textColor="@color/edit_text_hint"
+                android:textSize="14sp"
+                android:textStyle="normal"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/edit_text_corners"
+                android:backgroundTint="@color/editText"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:hintEnabled="false"
+                app:hintTextColor="@color/edit_text_hint"
+                app:layout_constraintEnd_toEndOf="@+id/loginFieldContainer"
+                app:layout_constraintStart_toStartOf="@+id/loginFieldContainer"
+                app:layout_constraintTop_toBottomOf="@+id/passwordTitle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/birthDateEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/profile_name_icon"
+                    android:drawablePadding="15dp"
+                    android:hint="01.01.1991"
+                    android:inputType="textPassword"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Номер телефона"
+                android:textColor="@color/edit_text_hint"
+                android:textSize="14sp"
+                android:textStyle="normal"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/edit_text_corners"
+                android:backgroundTint="@color/editText"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:hintEnabled="false"
+                app:hintTextColor="@color/edit_text_hint"
+                app:layout_constraintEnd_toEndOf="@+id/loginFieldContainer"
+                app:layout_constraintStart_toStartOf="@+id/loginFieldContainer"
+                app:layout_constraintTop_toBottomOf="@+id/passwordTitle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/phoneEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/profile_name_icon"
+                    android:drawablePadding="15dp"
+                    android:hint="555 555 555"
+                    android:inputType="textPassword"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="График работы"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="40dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sun_icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Дневная смена с 10:00 до 17:00"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:textSize="16sp"
+                android:layout_marginStart="8dp"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/night_icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Вечерняя смена с 17:00 до 23:00"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:textSize="16sp"
+                android:layout_marginStart="8dp"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/free_day_icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Выходной"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:textSize="16sp"
+                android:layout_marginStart="8dp"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</ScrollView>

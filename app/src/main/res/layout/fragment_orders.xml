@@ -24,6 +24,7 @@
             android:layout_marginHorizontal="16dp">
 
             <ImageButton
+                android:id="@+id/profileBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/transparent"
@@ -42,6 +43,7 @@
                 android:textSize="17sp" />
 
             <ImageButton
+                android:id="@+id/notificationBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/transparent"

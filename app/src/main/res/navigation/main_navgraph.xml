@@ -9,15 +9,32 @@
         android:id="@+id/menuFragment"
         android:name="com.neocafe.neocafewaiter.ui.fragments.menu.MenuFragment"
         android:label="fragment_menu"
-        tools:layout="@layout/fragment_menu" />
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
     <fragment
         android:id="@+id/ordersFragment"
         android:name="com.neocafe.neocafewaiter.ui.fragments.orders.OrdersFragment"
         android:label="fragment_orders"
-        tools:layout="@layout/fragment_orders" />
+        tools:layout="@layout/fragment_orders" >
+        <action
+            android:id="@+id/action_ordersFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
     <fragment
         android:id="@+id/newOrderFragment"
         android:name="com.neocafe.neocafewaiter.ui.fragments.orderNew.NewOrderFragment"
         android:label="fragment_new_order"
-        tools:layout="@layout/fragment_new_order" />
+        tools:layout="@layout/fragment_new_order" >
+        <action
+            android:id="@+id/action_newOrderFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.neocafe.neocafewaiter.ui.fragments.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>
