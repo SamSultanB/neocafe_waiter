@@ -62,4 +62,11 @@
     <string name="_720">720 сом</string>
     <string name="add">Добавить</string>
     <string name="closeOrder">Закрыть счет</string>
+    <string name="amount">Кол-во</string>
+    <string name="sum">Сумма</string>
+    <string name="productName">Наименование</string>
+    <string name="beforeUsingBonuses">До списания бонусов:</string>
+    <string name="total">Итого:</string>
+    <string name="approve">Подтвердить</string>
+    <string name="profile">Профиль</string>
 </resources>

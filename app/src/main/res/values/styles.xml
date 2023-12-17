@@ -3,4 +3,10 @@
     <style name="BottomNavStyle" parent="Widget.Design.BottomNavigationView">
         <item name="background">@drawable/bottom_nav_bar</item>
     </style>
+
+    <style name="SearchQueryTextStyle" parent="Widget.AppCompat.SearchView">
+        <item name="android:textColor">@color/edit_text_hint</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
 </resources>

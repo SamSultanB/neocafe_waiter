@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.neocafe.neocafewaiter.R
 import com.neocafe.neocafewaiter.databinding.FragmentNewOrderBinding
+import com.neocafe.neocafewaiter.databinding.FragmentNewOrderMenuBinding
 
 class NewOrderFragment : Fragment() {
 
