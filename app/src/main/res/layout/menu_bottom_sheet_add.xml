@@ -49,79 +49,10 @@
                 android:textSize="20sp"/>
 
             <RadioGroup
-                android:id="@+id/radioGroup"
+                android:id="@+id/radioGroupMilk"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <RadioButton
-                        android:id="@+id/radioCaw"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:checked="true"
-                        android:text="Коровье молоко"/>
-
-                    <TextView
-                        android:id="@+id/cawMilkPrice"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="+0 с"
-                        android:textSize="16sp"
-                        android:textStyle="normal"
-                        android:textColor="@color/orange"
-                        android:layout_marginHorizontal="6dp"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <RadioButton
-                        android:id="@+id/radioSheep"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Овсяное молоко"/>
-
-                    <TextView
-                        android:id="@+id/sheepMilkPrice"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="+0 с"
-                        android:textSize="16sp"
-                        android:textStyle="normal"
-                        android:textColor="@color/orange"
-                        android:layout_marginHorizontal="6dp"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <RadioButton
-                        android:id="@+id/radioSoya"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Соевое молоко"/>
-
-                    <TextView
-                        android:id="@+id/soyaMilkPrice"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="+0 с"
-                        android:textSize="16sp"
-                        android:textStyle="normal"
-                        android:textColor="@color/orange"
-                        android:layout_marginHorizontal="6dp"/>
-
-                </LinearLayout>
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
 
             </RadioGroup>
@@ -146,54 +77,12 @@
                 android:textStyle="normal"
                 android:textColor="@color/black"
                 android:textSize="20sp"/>
-
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <CheckBox
-                    android:id="@+id/strubberyCeckBox"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="16sp"
-                    android:textColor="@color/black"
-                    android:textStyle="normal"
-                    android:text="Клубничный"/>
-
-                <TextView
-                    android:id="@+id/strubberyPrice"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="+30 с"
-                    android:textSize="16sp"
-                    android:textStyle="normal"
-                    android:textColor="@color/orange"
-                    android:layout_marginHorizontal="6dp"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <CheckBox
-                    android:id="@+id/caramelCheckBox"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="16sp"
-                    android:textColor="@color/black"
-                    android:textStyle="normal"
-                    android:text="Карамельный"/>
-
-                <TextView
-                    android:id="@+id/caramelPrice"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="+50 с"
-                    android:textSize="16sp"
-                    android:textStyle="normal"
-                    android:textColor="@color/orange"
-                    android:layout_marginHorizontal="6dp"/>
+                android:id="@+id/sirposContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
 
             </LinearLayout>
 

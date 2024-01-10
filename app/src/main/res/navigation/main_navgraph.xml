@@ -31,10 +31,46 @@
         <action
             android:id="@+id/action_newOrderFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_newOrderFragment_to_newOrderMenuFragment"
+            app:destination="@id/newOrderMenuFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.neocafe.neocafewaiter.ui.fragments.profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/orderStatusFragment"
+        android:name="com.neocafe.neocafewaiter.ui.fragments.orders.OrderStatusFragment"
+        android:label="fragment_order_status"
+        tools:layout="@layout/fragment_order_status" >
+        <action
+            android:id="@+id/action_orderStatusFragment_to_orderDetailsFragment"
+            app:destination="@id/orderDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderTablesFragment"
+        android:name="com.neocafe.neocafewaiter.ui.fragments.orders.OrderTablesFragment"
+        android:label="fragment_order_tables"
+        tools:layout="@layout/fragment_order_tables" />
+    <fragment
+        android:id="@+id/newOrderMenuFragment"
+        android:name="com.neocafe.neocafewaiter.ui.fragments.orderNew.NewOrderMenuFragment"
+        android:label="fragment_new_order_menu"
+        tools:layout="@layout/fragment_new_order_menu" >
+        <action
+            android:id="@+id/action_newOrderMenuFragment_to_newOrderSuccessFragment"
+            app:destination="@id/newOrderSuccessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newOrderSuccessFragment"
+        android:name="com.neocafe.neocafewaiter.ui.fragments.orderNew.NewOrderSuccessFragment"
+        android:label="fragment_new_order_success"
+        tools:layout="@layout/fragment_new_order_success" />
+    <fragment
+        android:id="@+id/orderDetailsFragment"
+        android:name="com.neocafe.neocafewaiter.ui.fragments.orders.OrderDetailsFragment"
+        android:label="fragment_order_details"
+        tools:layout="@layout/fragment_order_details" />
 </navigation>

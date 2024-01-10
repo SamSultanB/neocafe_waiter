@@ -24,6 +24,7 @@
     <color name="purple">#A020F0</color>
     <color name="green">#33C300</color>
     <color name="gray">#5B5B70</color>
+    <color name="error_field_color">#FF4C4C</color>
 
 <!--orders page color-->
     <color name="selected_tab">#8876C5</color>

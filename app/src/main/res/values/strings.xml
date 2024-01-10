@@ -71,4 +71,13 @@
     <string name="profile">Профиль</string>
     <string name="notifications">Уведомления</string>
     <string name="clearEverything">Очистить все</string>
+    <string name="monday">Пн</string>
+    <string name="tuesday">Вт</string>
+    <string name="wednesday">Ср</string>
+    <string name="thursday">Чт</string>
+    <string name="friday">Пт</string>
+    <string name="saturday">Сб</string>
+    <string name="sunday">Вс</string>
+    <string name="neocafeWaiter">neocafe-waiter</string>
+    <string name="otpHelperText">Введите 4-х значный код, отправленный на номер </string>
 </resources>
