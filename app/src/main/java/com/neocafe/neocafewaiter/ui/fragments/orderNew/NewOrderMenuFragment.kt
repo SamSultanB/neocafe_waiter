@@ -22,7 +22,7 @@ import com.neocafe.neocafewaiter.databinding.FragmentNewOrderMenuBinding
 import com.neocafe.neocafewaiter.entities.basket.Basket
 import com.neocafe.neocafewaiter.entities.category.CategoryResonse
 import com.neocafe.neocafewaiter.entities.menu.MenuResponse
-import com.neocafe.neocafewaiter.model.api.retrofit.Resource
+import com.neocafe.neocafewaiter.model.api.retrofit.NetworkStatus
 import com.neocafe.neocafewaiter.viewModels.NewOrderViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -176,18 +176,18 @@ class NewOrderMenuFragment : Fragment() {
 
     private fun getMenuResponse(){
         viewModel.menuResponse.observe(viewLifecycleOwner, Observer{
-            if (it is Resource.Success){
+            if (it is NetworkStatus.Success){
                 binding.rvMenu.isVisible = true
                 binding.progressBar.isVisible = false
                 it.data?.let {
                     menuAdapter.setMenuList(it)
                     binding.rvMenu.adapter = menuAdapter
                 }
-            }else if (it is Resource.Error){
+            }else if (it is NetworkStatus.Error){
                 binding.rvMenu.isVisible = false
                 binding.progressBar.isVisible = true
                 Toast.makeText(requireContext(), it.message, Toast.LENGTH_SHORT).show()
-            }else if (it is Resource.Loading){
+            }else if (it is NetworkStatus.Loading){
                 binding.rvMenu.isVisible = false
                 binding.progressBar.isVisible = true
             }
@@ -200,7 +200,7 @@ class NewOrderMenuFragment : Fragment() {
 
     private fun categoriesResponse(){
         viewModel.categoryResponse.observe(viewLifecycleOwner, Observer{
-            if (it is Resource.Success){
+            if (it is NetworkStatus.Success){
                 it.data?.let { it1 ->
                     for (i in 1..it1.size){
                         when(i){
@@ -247,7 +247,7 @@ class NewOrderMenuFragment : Fragment() {
                         }
                     }
                 }
-            }else if(it is Resource.Error){
+            }else if(it is NetworkStatus.Error){
                 Toast.makeText(requireContext(), it.message, Toast.LENGTH_SHORT).show()
             }
         })

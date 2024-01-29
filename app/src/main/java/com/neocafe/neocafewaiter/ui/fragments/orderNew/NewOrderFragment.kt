@@ -14,7 +14,7 @@ import com.neocafe.neocafewaiter.R
 import com.neocafe.neocafewaiter.adapters.TablesRvAdapter
 import com.neocafe.neocafewaiter.databinding.FragmentNewOrderBinding
 import com.neocafe.neocafewaiter.entities.basket.Basket
-import com.neocafe.neocafewaiter.model.api.retrofit.Resource
+import com.neocafe.neocafewaiter.model.api.retrofit.NetworkStatus
 import com.neocafe.neocafewaiter.viewModels.NewOrderViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -27,7 +27,7 @@ class NewOrderFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         binding = FragmentNewOrderBinding.inflate(layoutInflater, container, false)
         return binding.root
@@ -54,14 +54,14 @@ class NewOrderFragment : Fragment() {
         viewModel.tablesResponse.observe(viewLifecycleOwner, Observer{
             binding.progressBar.isVisible = true
             binding.tablesRv.isVisible = false
-            if (it is Resource.Success){
+            if (it is NetworkStatus.Success){
                 binding.progressBar.isVisible = false
                 binding.tablesRv.isVisible = true
                 it.data?.let { it1 ->
                     tablesAdapter.setTablesList(it1)
                     binding.tablesRv.adapter = tablesAdapter
                 }
-            }else if(it is Resource.Error){
+            }else if(it is NetworkStatus.Error){
                 Toast.makeText(requireContext(), it.message, Toast.LENGTH_SHORT).show()
             }
         })

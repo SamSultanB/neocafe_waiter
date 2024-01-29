@@ -11,7 +11,7 @@ import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.neocafe.neocafewaiter.R
 import com.neocafe.neocafewaiter.databinding.FragmentProfileBinding
-import com.neocafe.neocafewaiter.model.api.retrofit.Resource
+import com.neocafe.neocafewaiter.model.api.retrofit.NetworkStatus
 import com.neocafe.neocafewaiter.viewModels.ProfileViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -39,7 +39,7 @@ class ProfileFragment : Fragment() {
 
     private fun getProfileResponse(){
         viewModel.profileResponse.observe(viewLifecycleOwner, Observer{
-            if(it is Resource.Success){
+            if(it is NetworkStatus.Success){
                 it.data?.let {
                     binding.nameEditText.setText(it.first_name)
                     binding.surnameEditText.setText(it.last_name)
@@ -138,7 +138,7 @@ class ProfileFragment : Fragment() {
 
 
                 }
-            }else if (it is Resource.Error){
+            }else if (it is NetworkStatus.Error){
                 Toast.makeText(requireContext(), it.message, Toast.LENGTH_SHORT).show()
             }
         })

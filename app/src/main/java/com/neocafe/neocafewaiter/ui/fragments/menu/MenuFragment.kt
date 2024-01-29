@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
@@ -13,7 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.neocafe.neocafewaiter.adapters.MenuRvAdapter
 import com.neocafe.neocafewaiter.databinding.FragmentMenuBinding
 import com.neocafe.neocafewaiter.entities.category.CategoryResonse
-import com.neocafe.neocafewaiter.model.api.retrofit.Resource
+import com.neocafe.neocafewaiter.model.api.retrofit.NetworkStatus
 import com.neocafe.neocafewaiter.viewModels.MenuViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -166,18 +165,18 @@ class MenuFragment : Fragment() {
 
     private fun getMenuResponse(){
         viewModel.menuResponse.observe(viewLifecycleOwner, Observer{
-            if (it is Resource.Success){
+            if (it is NetworkStatus.Success){
                 binding.rvMenu.isVisible = true
                 binding.progressBar.isVisible = false
                 it.data?.let {
                     menuAdapter.setMenuList(it)
                     binding.rvMenu.adapter = menuAdapter
                 }
-            }else if (it is Resource.Error){
+            }else if (it is NetworkStatus.Error){
                 binding.rvMenu.isVisible = false
                 binding.progressBar.isVisible = true
                 Toast.makeText(requireContext(), it.message, Toast.LENGTH_SHORT).show()
-            }else if (it is Resource.Loading){
+            }else if (it is NetworkStatus.Loading){
                 binding.rvMenu.isVisible = false
                 binding.progressBar.isVisible = true
             }
@@ -190,7 +189,7 @@ class MenuFragment : Fragment() {
 
     private fun categoriesResponse(){
         viewModel.categoryResponse.observe(viewLifecycleOwner, Observer{
-            if (it is Resource.Success){
+            if (it is NetworkStatus.Success){
                 it.data?.let { it1 ->
                    for (i in 1..it1.size){
                        when(i){
@@ -237,7 +236,7 @@ class MenuFragment : Fragment() {
                        }
                    }
                 }
-            }else if(it is Resource.Error){
+            }else if(it is NetworkStatus.Error){
                 Toast.makeText(requireContext(), it.message, Toast.LENGTH_SHORT).show()
             }
         })

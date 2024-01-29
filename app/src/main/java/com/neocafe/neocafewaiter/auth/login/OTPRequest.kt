@@ -1,4 +1,4 @@
-package com.neocafe.neocafewaiter.entities.login
+package com.neocafe.neocafewaiter.auth.login
 
 import java.io.Serializable
 
