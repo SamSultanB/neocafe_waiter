@@ -1,9 +1,14 @@
 package com.neocafe.neocafewaiter.ui.activities
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.neocafe.neocafewaiter.databinding.ActivitySplashScreenBinding
+
+
+@SuppressLint("CustomSplashScreen")
+//todo:remove and make it fragment
 
 class SplashScreenActivity : AppCompatActivity() {
 

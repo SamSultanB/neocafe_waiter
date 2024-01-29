@@ -1,4 +1,4 @@
-package com.neocafe.neocafewaiter.ui.fragments.auth
+package com.neocafe.neocafewaiter.auth.auth
 
 import android.content.Intent
 import android.content.res.ColorStateList
@@ -12,10 +12,10 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.neocafe.neocafewaiter.R
 import com.neocafe.neocafewaiter.databinding.FragmentOTPBinding
-import com.neocafe.neocafewaiter.entities.login.OTPRequest
-import com.neocafe.neocafewaiter.model.api.retrofit.Resource
+import com.neocafe.neocafewaiter.auth.login.OTPRequest
+import com.neocafe.neocafewaiter.model.api.retrofit.NetworkStatus
 import com.neocafe.neocafewaiter.ui.activities.MainActivity
-import com.neocafe.neocafewaiter.viewModels.AuthViewModel
+import com.neocafe.neocafewaiter.login.presentation.AuthViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class OTPFragment : Fragment() {
@@ -58,11 +58,11 @@ class OTPFragment : Fragment() {
 
     private fun otpResponse(){
         viewModel.otpResponse.observe(viewLifecycleOwner, Observer {
-            if(it is Resource.Success){
+            if(it is NetworkStatus.Success){
                 val intent = Intent(this.activity, MainActivity::class.java)
                 startActivity(intent)
                 activity?.finish()
-            }else if(it is Resource.Error){
+            }else if(it is NetworkStatus.Error){
                 binding.helpText.text = "Код введен неверно, попробуйте еще раз"
                 binding.helpText.setTextColor(Color.RED)
 
